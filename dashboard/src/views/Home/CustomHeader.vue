@@ -55,7 +55,9 @@
 
 <script>
 export default {
-
+  setup (_, { emit }) {
+    return { emit }
+  }
 }
 </script>
 
