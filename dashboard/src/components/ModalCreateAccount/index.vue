@@ -138,8 +138,7 @@ export default {
     })
     async function login ({ email, password }) {
       const { data, errors } = await services.auth.login({ email, password })
-      console.log(data)
-      console.log(errors)
+
       if (!errors) {
         window.localStorage.setItem('token', data.token)
         router.push({ name: 'Feedbacks' })
@@ -164,7 +163,7 @@ export default {
           return
         }
         if (errors.status === 400) {
-          toast.error('Ocorreu um erro ao criar a contas')
+          toast.error('Ocorreu um erro ao criar a conta')
         }
         state.isLoading = false
       } catch (error) {
