@@ -24,7 +24,6 @@ export default {
           return
         }
         const { data } = await services.users.getMe()
-        console.log('data', data)
         setCurrentUser(data)
       }
     })
